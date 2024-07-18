@@ -1,0 +1,91 @@
+Questions:
+1. IF Function: 
+o Determine if employees are earning above or below $50,000. Use the IF function to 
+display "Above" or "Below". 
+  	=IF(F2 > 50000, "Above 50,000", "Below 50,000")
+
+2. IFS Function: 
+o Assign a performance rating based on the number of project hours: "Excellent" for 
+50 or more hours, "Good" for 40-49 hours, "Average" for 30-39 hours, and "Poor" 
+for below 30 hours. 
+ 	=IFS(J3>=50,"Excellent",AND(J3>=40,J3<=49),"good",AND(J3>=30,J3<=39),"Average",J3<30,"Poor")
+
+3. AND Function: 
+o Check if employees from the HR department and North region have sales above 
+$15,000. 
+  	=IF(AND(H3>=15000,I3="North"),"True","False")
+
+4. OR Function: 
+o Identify employees who are either in the IT department or have a salary above 
+$60,000. 
+  	=IF(OR(E6="IT",F6>=60000),"True","False")
+
+5. NOT Function: 
+o Determine if employees are not from the Marketing department. 
+  	=IF(E4="Marketing"," from Marketing Department","Not From Marketing Department")
+
+6. SUMIF Function: 
+o Calculate the total salary of employees from the Sales department. 
+  	=SUMIF(E5:$E$1001,"Sales",$F:$F)
+
+7. SUMIFS Function: 
+o Calculate the total salary of employees in the IT department who have more than 35 
+project hours. 
+  	=SUMIFS($F$2:$F$1001,$E$2:$E$1001,"IT",$J$2:$J$1001,">35")
+
+8. COUNTIF Function: 
+o Count the number of employees in the HR department.
+  	=COUNTIF($E$2:$E$1001,"HR")
+ 
+9. COUNTIFS Function: 
+o Count the number of female employees in the Finance department. 
+  	=COUNTIFS($D$2:$D$1001,"F",$E$2:$E$1001,"Finance")
+
+10. AVERAGEIF Function: 
+o Find the average salary of employees in the Marketing department.
+  	=AVERAGEIF($E$2:$E$1001,"Marketing",$F$2:$F$1001)
+ 
+11. AVERAGEIFS Function: 
+o Find the average sales for employees in the North region with project hours above 
+40. 
+  	=AVERAGEIFS($H$2:$H$1001,$I$2:$I$1001,"North",$J$2:$J$1001,">40")
+
+12. MAXIFS Function: 
+o Determine the maximum salary among employees in the South region. 
+  	=MAXIFS($F$2:$F$1001,$I$2:$I$1001,"South")
+
+13. MINIFS Function: 
+o Find the minimum number of project hours for employees in the Finance 
+department.
+ 	=MINIFS($J$2:$J$1001,$E$2:$E$1001,"Finance")
+ 
+14. VLOOKUP Function: 
+o Use VLOOKUP to find the salary of an employee based on their ID. 
+  	=VLOOKUP(A4,A4:X1003,6,FALSE)
+
+15. HLOOKUP Function: 
+o Use HLOOKUP to find the joining date of employees based on their department. 
+  	*Not Working*
+
+
+16. INDEX and MATCH Functions: 
+o Use INDEX and MATCH to find the sales amount for a specific employee. 
+  	=INDEX($H$2:$H$1001,MATCH("Austin Simmons",$B$2:$B$1001,0))
+
+17. Conditional Formatting: 
+o Highlight cells in the Salary column that are above $60,000. 
+  	->Conditional Formating-> Highlight cell rules ->Select Greater Than-> Add Specific condition-> click Ok
+
+18. Pivot Table: 
+o Create a pivot table to summarize average sales by region and department.
+   	 -> insert-> pivot table-> set Column=region,Row=Department-> Value=sales-> select Designs from the ribbon-> select pivot chart->          choose a chart type(ex. bar chart).  
+ 
+19. Data Validation: 
+o Set up data validation to allow only dates after 2015-01-01 in the Joining Date 
+column. 
+  	-> select Joining date column-> click Data option  from the Ribbon-> select Data Validation-> Settings-> Allow-> Value-> Time-> Ok
+
+
+20. Chart Creation: 
+o Create a bar chart to visualize the total sales by department.
+  	->insert-> pivot table-> set row=Department, column=sales->  Designs-> pivot chart-> choose a chart type(ex. column chart).
